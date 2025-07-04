@@ -1,14 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import MovieRecommendations from "./components/MovieRecommendations";
 import FoodRecommendations from "./components/FoodRecommendations";
 import MusicRecommendations from "./components/MusicRecommendations";
 import ProductRecommendations from "./components/ProductRecommendations";
 import JobRecommendations from "./components/JobRecommendations";
-
-
-
 
 function App() {
   return (
