@@ -1,0 +1,158 @@
+/* Home.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  min-height: 100vh;
+  color: #f5f5dc;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 60px;
+}
+
+.home-title {
+  font-size: 3rem;
+  color: #f5deb3;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #ddd8c4;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding-bottom: 20px;
+  max-width: 100%;
+}
+
+.cards-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #bfa760;
+  border-radius: 4px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+  }
+}
+
+
+.category-card {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding: 30px 20px 75px; /* extra space for button */
+  width: 250px;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  border: 1px solid transparent;
+}
+
+.category-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px #d4af37, 0 12px 35px rgba(0, 0, 0, 0.8);
+  border: 1px solid #d4af37;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #f5deb3;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #ccc7ae;
+}
+
+.card-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #bfa760, #8c784b);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  color: #0f0f0f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-button:hover {
+  background: linear-gradient(135deg, #d4af37, #bfa760);
+  transform: translate(-50%, -3px);
+}
+
+.card-button:active {
+  transform: translate(-50%, 0) scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Remove underline and style navbar links */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333; /* or pick your brand color */
+}
+
+a:hover {
+  color: #0073e6; /* optional: add hover color */
+}
+
+.home-title {
+  background: linear-gradient(90deg, #d7b577, #ffeec1, #d7b577);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2.5s linear infinite;
+
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}

@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import MovieRecommendations from "./components/MovieRecommendations";
+import FoodRecommendations from "./components/FoodRecommendations";
+import MusicRecommendations from "./components/MusicRecommendations";
+import ProductRecommendations from "./components/ProductRecommendations";
+import JobRecommendations from "./components/JobRecommendations";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav style={{ padding: "1rem", background: "#161512FF" }}>
+          <Link to="/" style={{ marginRight: "10px", fontSize: "35px", color: "#fdfdfd" }}>Choosify</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<MovieRecommendations />} />
+          <Route path="/food" element={<FoodRecommendations />} />
+          <Route path="/music" element={<MusicRecommendations />} />
+          <Route path="/products" element={<ProductRecommendations />} />  
+          <Route path="/jobs" element={<JobRecommendations />} />       
+          {/* Add more routes for other categories */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
