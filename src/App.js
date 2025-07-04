@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as HashRouter, HashRoutes, Route, Link } from "react-router-dom";
+import { HashRouter as HashRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import MovieRecommendations from "./components/MovieRecommendations";
 import FoodRecommendations from "./components/FoodRecommendations";
@@ -15,7 +15,7 @@ function App() {
           <Link to="/" style={{ marginRight: "10px", fontSize: "35px", color: "#fdfdfd" }}>Choosify</Link>
         </nav>
 
-        <HashRoutes>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<MovieRecommendations />} />
           <Route path="/food" element={<FoodRecommendations />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="/products" element={<ProductRecommendations />} />  
           <Route path="/jobs" element={<JobRecommendations />} />       
           {/* Add more routes for other categories */}
-        </HashRoutes>
+        </Routes>
       </div>
     </HashRouter>
   );
