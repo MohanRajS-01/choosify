@@ -9,13 +9,13 @@ import JobRecommendations from "./components/JobRecommendations";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div>
         <nav style={{ padding: "1rem", background: "#161512FF" }}>
           <Link to="/" style={{ marginRight: "10px", fontSize: "35px", color: "#fdfdfd" }}>Choosify</Link>
         </nav>
 
-        <Routes>
+        <HashRoutes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<MovieRecommendations />} />
           <Route path="/food" element={<FoodRecommendations />} />
@@ -23,9 +23,9 @@ function App() {
           <Route path="/products" element={<ProductRecommendations />} />  
           <Route path="/jobs" element={<JobRecommendations />} />       
           {/* Add more routes for other categories */}
-        </Routes>
+        </HashRoutes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
